@@ -4,9 +4,11 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (request, response) => {
-  response.json({
-    msg: 'Hi APM!'
-  })
+  setTimeout(()=>{
+    response.json({
+      msg: 'Hi APM!'
+    });
+  }, 5000);
 })
 
 app.listen(80, () => {
